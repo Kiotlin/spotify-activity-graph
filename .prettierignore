@@ -1,0 +1,15 @@
+# Build artifacts
+.next/
+.vercel/
+.turbo/
+_next/
+__tmp__/
+dist/
+node_modules/
+target/
+compiled/
+out/
+build/
+
+yarn.lock
+package-lock.json
