@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { FaSpotify, FaApple } from "react-icons/fa";
-import Spinner from "@/components/ui/spinner";
-import { signIn } from "next-auth/react";
-import { ToastAction } from "@/components/ui/toast";
-import { useToast } from "@/components/ui/use-toast";
+import React from "react"
+import { Button } from "@/components/ui/button"
+import { FaSpotify, FaApple } from "react-icons/fa"
+import Spinner from "@/components/ui/spinner"
+import { signIn } from "next-auth/react"
+import { ToastAction } from "@/components/ui/toast"
+import { useToast } from "@/components/ui/use-toast"
 
 export default function UserAuthForm() {
-  const [isSpotifyLoading, setIsSpotifyLoading] = React.useState(false);
-  const [isAppleMusicLoading, setIsAppleMusicLoading] = React.useState(false);
-  const { toast } = useToast();
+  const [isSpotifyLoading, setIsSpotifyLoading] = React.useState(false)
+  const [isAppleMusicLoading, setIsAppleMusicLoading] = React.useState(false)
+  const { toast } = useToast()
 
   return (
     <>
@@ -19,8 +19,8 @@ export default function UserAuthForm() {
         <Button
           variant="outline"
           onClick={() => {
-            setIsSpotifyLoading(true);
-            signIn("spotify", { callbackUrl: "/graph" });
+            setIsSpotifyLoading(true)
+            signIn("spotify", { callbackUrl: "/graph" })
           }}
           disabled={isAppleMusicLoading || isSpotifyLoading}
         >
@@ -43,10 +43,10 @@ export default function UserAuthForm() {
         </div>
         <Button
           onClick={() => {
-            setIsAppleMusicLoading(true);
+            setIsAppleMusicLoading(true)
             setTimeout(() => {
-              setIsAppleMusicLoading(false);
-            }, 5000);
+              setIsAppleMusicLoading(false)
+            }, 5000)
             toast({
               title: "Oops, sorry!",
               description: "Apple Music support is coming soon!",
@@ -57,8 +57,8 @@ export default function UserAuthForm() {
                 >
                   Got it
                 </ToastAction>
-              )
-            });
+              ),
+            })
           }}
           disabled={isAppleMusicLoading || isSpotifyLoading}
         >
@@ -71,5 +71,5 @@ export default function UserAuthForm() {
         </Button>
       </div>
     </>
-  );
+  )
 }

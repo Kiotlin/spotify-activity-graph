@@ -1,6 +1,6 @@
-import { SiteConfig } from "../types";
+import { SiteConfig } from "../types"
 
-export const siteDomain = "https://spotify-activity-graph.vercel.app";
+export const siteDomain = "https://spotify-activity-graph.vercel.app"
 
 export const siteConfig: SiteConfig = {
   name: "spotify-activity-graph",
@@ -10,10 +10,10 @@ export const siteConfig: SiteConfig = {
     title: "spotify-activity-graph",
     type: "website",
     url: siteDomain,
-    image: `${siteDomain}/og.png`
+    image: `${siteDomain}/og.png`,
   },
   media: {
     twitter: "https://twitter.com/spotify-activity-graph",
-    github: "https://github.com/Kiotlin/spotify-activity-graph"
-  }
-};
+    github: "https://github.com/Kiotlin/spotify-activity-graph",
+  },
+}

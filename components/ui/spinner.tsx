@@ -1,4 +1,4 @@
-import React, { SVGProps } from "react";
+import React, { SVGProps } from "react"
 
 export function Spinner(props: SVGProps<SVGSVGElement>) {
   return (
@@ -22,6 +22,6 @@ export function Spinner(props: SVGProps<SVGSVGElement>) {
         ></animateTransform>
       </path>
     </svg>
-  );
+  )
 }
-export default Spinner;
+export default Spinner

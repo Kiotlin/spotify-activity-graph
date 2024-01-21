@@ -1,17 +1,17 @@
-"use client";
+"use client"
 
-import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/ui/mode-toggle";
-import { signOut } from "next-auth/react";
-import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button"
+import { ModeToggle } from "@/components/ui/mode-toggle"
+import { signOut } from "next-auth/react"
+import { usePathname } from "next/navigation"
 
 interface IndexLayoutProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export default function IndexLayout({ children }: IndexLayoutProps) {
-  const pathname = usePathname();
-  const isGraphPage = pathname === "/graph";
+  const pathname = usePathname()
+  const isGraphPage = pathname === "/graph"
 
   return (
     <div className="relative flex flex-col">
@@ -30,5 +30,5 @@ export default function IndexLayout({ children }: IndexLayoutProps) {
       </header>
       {children}
     </div>
-  );
+  )
 }

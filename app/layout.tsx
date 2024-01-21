@@ -1,22 +1,22 @@
-import "./globals.css";
-import type { Metadata } from "next";
-import { ThemeProvider } from "@/components/theme-provider";
-import { AuthSessionProvider } from "@/components/session-provider";
-import { Inter } from "next/font/google";
-import { cn } from "@/lib/utils";
-import { Toaster } from "@/components/ui/toaster";
+import "./globals.css"
+import type { Metadata } from "next"
+import { ThemeProvider } from "@/components/theme-provider"
+import { AuthSessionProvider } from "@/components/session-provider"
+import { Inter } from "next/font/google"
+import { cn } from "@/lib/utils"
+import { Toaster } from "@/components/ui/toaster"
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Spotify Activity Graph",
-  description: "Share your original music life"
-};
+  description: "Share your original music life",
+}
 
 export default function RootLayout({
-  children
+  children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -39,5 +39,5 @@ export default function RootLayout({
         </AuthSessionProvider>
       </body>
     </html>
-  );
+  )
 }

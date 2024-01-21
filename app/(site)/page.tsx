@@ -1,9 +1,9 @@
-import { siteConfig } from "@/config/site";
-import LoginButton from "@/components/ui/login";
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import Link from "next/link";
+import { siteConfig } from "@/config/site"
+import LoginButton from "@/components/ui/login"
+import React from "react"
+import { Button } from "@/components/ui/button"
+import { GitHubLogoIcon } from "@radix-ui/react-icons"
+import Link from "next/link"
 
 export default function IndexPage() {
   return (
@@ -52,5 +52,5 @@ export default function IndexPage() {
         </section>
       </main>
     </>
-  );
+  )
 }
