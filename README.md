@@ -7,7 +7,7 @@ Generate your original Spotify activity graph.
 
 ## Roadmap
 
-- [ ] Spotify authorization flow (obtain access token & refresh token).
+- [x] Spotify authorization flow (obtain access token & refresh token).
 - [ ] Traverse all playback records (feasibility investigation) and cache the data locally.
 - [ ] Simple frontend to display the graph.
 
