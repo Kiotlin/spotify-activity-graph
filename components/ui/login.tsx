@@ -11,17 +11,10 @@ interface LoginButtonProps {
 
 const LoginButton: React.FC<LoginButtonProps> = ({ displayText }) => {
   const router = useRouter()
-  const { data: session } = useSession()
-
   return (
     <Button
       onClick={() => {
-        if (session) {
-          console.log(session)
-          router.push("/graph")
-        } else {
-          router.push("/login")
-        }
+        router.push("/login")
       }}
     >
       {displayText || "Login"}
